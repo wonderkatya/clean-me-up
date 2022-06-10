@@ -1,20 +1,20 @@
 package com.effcode.clean.me.rest;
 
+import com.effcode.clean.me.support.SmtpHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.annotation.Bean;
 
-import com.effcode.clean.me.support.SmtpHandler;
-
 @SpringBootApplication
+@ConfigurationPropertiesScan
 public class CleanMeRestApplication {
-    
-    @Bean
-    public SmtpHandler smtpHandler() {
-        return new SmtpHandler();
-    }
+  @Bean
+  public SmtpHandler smtpHandler() {
+    return new SmtpHandler();
+  }
 
-	public static void main(String[] args) {
-		SpringApplication.run(CleanMeRestApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(CleanMeRestApplication.class, args);
+  }
 }

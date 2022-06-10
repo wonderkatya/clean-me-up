@@ -28,3 +28,13 @@ When implementing a service - there are lots of things to consider. Some of thos
 * Data integrity
 * Fault handling
 
+## Comments after completion. 
+That is what I think acceptable code is (not perfect, there is always a chance to improve something). 
+I left some comments inside. This version is quite close to what I do now (except java version, I use 17th on prod).
+
+### Out of scope 
+* Authorization with spring security. 
+* Tracing. I would use any of brave/opentracing for production. 
+* Swagger and contract-first approach. 
+* CI-pipeline and k8s deployment. 
+* Prometheus + grafana dashboards. 

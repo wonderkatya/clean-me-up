@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: env, health, metrics, info, loggers, prometheus
+
+  # I don't know your context, so I did logging as if it was for my current project.
+  # We don't write to a text file for further ELK processing, we use just a stdout for k8s deployment.
+  # Instead of request filters we use ingress controller logs to see http requests/responses.
+logging:
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    org.springframework: INFO
+    com.effcode.clean.me.rest: DEBUG
+
+# There are different ways to store such properties from simple encryption tools
+#  like http://www.jasypt.org/ to special storage like Vault.
+com:
+  effcode:
+    smtp:
+      login: ${SMTP_LOGIN:admin}
+      pass: ${SMTP_PASS:admin}
