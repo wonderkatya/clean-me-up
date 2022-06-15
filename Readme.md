@@ -10,3 +10,4 @@ I left some comments inside. This version is quite close to what I do now (excep
 * contract-first approach. 
 * CI-pipeline and k8s deployment. 
 * Prometheus + grafana dashboards. 
+* Timeouts, retries for smtp handler
