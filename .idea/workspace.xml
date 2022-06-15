@@ -11,7 +11,28 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65e06281-ef93-448a-aacd-2d169ac29504" name="Changes" comment="" />
+    <list default="true" id="65e06281-ef93-448a-aacd-2d169ac29504" name="Changes" comment="fixes">
+      <change afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/config/SmtpHandlerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/CleanMeRestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/CleanMeRestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/config/RequestLoggingFilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/config/RequestLoggingFilterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/config/SmtpProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/config/SmtpProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/controller/ApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/ApiExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/controller/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/EmailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/model/EmailSendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/model/EmailSendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/model/ErrorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/model/ErrorData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/rest/service/EmailHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/java/com/effcode/clean/me/service/EmailHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/test/java/com/effcode/clean/me/rest/controller/EmailControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/test/java/com/effcode/clean/me/controller/EmailControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-rest/src/test/java/com/effcode/clean/me/rest/service/EmailHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clean-me-up-rest/src/test/java/com/effcode/clean/me/service/EmailHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean-me-up-support/clean-me-up-support.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,12 +41,23 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="/usr/local/Cellar/maven/3.6.3_1/libexec" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -34,17 +66,160 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2AITFVWWrc9CweyjPOtehkU9I1R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="org.tinygroup.studio.service.component.PackagePrefixConfigurable" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "32475530c08eee0dbd839bc544de98d2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.effcode.clean.me.rest" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CleanMeRestApplication (1)">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="clean-me-up" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="EmailControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clean-me-up-rest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.effcode.clean.me.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.effcode.clean.me.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.effcode.clean.me.controller.EmailControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clean-me-up-rest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.effcode.clean.me.rest.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.effcode.clean.me.rest.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.effcode.clean.me.rest.controller.EmailControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="clean-me-up" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="clean-me-up" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="clean-me-up" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="clean-me-up" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="clean-me-up" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CleanMeRestApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="clean-me-up-rest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.effcode.clean.me.CleanMeRestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean package" />
+      </method>
+    </configuration>
     <configuration name="CleanMeRestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="clean-me-up-rest" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.effcode.clean.me.rest.CleanMeRestApplication" />
@@ -52,6 +227,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="clean-me-up" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.EmailControllerTest (1)" />
+      <item itemvalue="JUnit.EmailControllerTest" />
+      <item itemvalue="Spring Boot.CleanMeRestApplication" />
+      <item itemvalue="Spring Boot.CleanMeRestApplication (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EmailControllerTest (1)" />
+        <item itemvalue="JUnit.EmailControllerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,10 +261,19 @@
       <option name="presentableId" value="Default" />
       <updated>1654695996997</updated>
       <workItem from="1654695998888" duration="299000" />
+      <workItem from="1655285846757" duration="1611000" />
+      <workItem from="1655288413416" duration="293000" />
+      <workItem from="1655288737806" duration="148000" />
+      <workItem from="1655288907670" duration="334000" />
+      <workItem from="1655289271391" duration="3576000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

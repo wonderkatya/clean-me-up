@@ -1,4 +1,4 @@
-package com.effcode.clean.me.rest.config;
+package com.effcode.clean.me.config;
 
 import javax.validation.constraints.NotBlank;
 import lombok.Data;

@@ -1,10 +1,12 @@
-package com.effcode.clean.me.rest.config;
+package com.effcode.clean.me.config;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
 @Configuration
+@ConditionalOnProperty(value = "com.effcode.clean.me.log-request-response", havingValue = "true")
 public class RequestLoggingFilterConfig {
 
   @Bean

@@ -1,4 +1,4 @@
-package com.effcode.clean.me.rest.model;
+package com.effcode.clean.me.model;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -15,7 +15,8 @@ public class EmailSendRequest {
   @NotBlank
   @Email
   private String address;
-  @NotBlank
+  @NotBlank // maybe it's valid to make this field optional
+  @Size(max = 256)
   private String subject;
   @NotBlank
   @Size(max = 65000)

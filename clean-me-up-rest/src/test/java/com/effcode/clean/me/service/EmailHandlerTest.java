@@ -1,13 +1,13 @@
-package com.effcode.clean.me.rest.service;
+package com.effcode.clean.me.service;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.effcode.clean.me.rest.config.SmtpProperties;
+import com.effcode.clean.me.config.SmtpProperties;
+import com.effcode.clean.me.model.EmailSendRequest;
 import com.effcode.clean.me.support.SmtpEmail;
 import com.effcode.clean.me.support.SmtpHandler;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,6 @@ import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 @ExtendWith(MockitoExtension.class)
 class EmailHandlerTest {
@@ -37,7 +36,11 @@ class EmailHandlerTest {
     when(smtpProperties.getPass()).thenReturn("pass");
     doNothing().when(smtpHandler).post(smtpEmailArgumentCaptor.capture());
 
-    emailHandler.send("123@gmal.com", "hi", "how are you?");
+    emailHandler.send(EmailSendRequest.builder()
+            .address("123@gmal.com")
+            .subject("hi")
+            .content("how are you?")
+        .build());
 
     verify(smtpHandler, times(1)).post(smtpEmailArgumentCaptor.capture());
     verify(smtpProperties, times(1)).getLogin();

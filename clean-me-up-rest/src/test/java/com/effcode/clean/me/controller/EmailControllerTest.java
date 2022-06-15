@@ -1,7 +1,6 @@
-package com.effcode.clean.me.rest.controller;
+package com.effcode.clean.me.controller;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.times;
@@ -11,8 +10,9 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.effcode.clean.me.rest.model.EmailSendRequest;
-import com.effcode.clean.me.rest.service.EmailHandler;
+import com.effcode.clean.me.model.EmailSendRequest;
+import com.effcode.clean.me.rest.EmailController;
+import com.effcode.clean.me.service.EmailHandler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
@@ -25,6 +25,9 @@ import org.springframework.test.web.servlet.MockMvc;
 class EmailControllerTest {
 
   private static final String URL = "/api/v1/send-email";
+  private static final String SUBJECT = "Code quality discussion.";
+  private static final String EMAIL = "testmail@gmail.coom";
+  private static final String CONTENT = "lets talk";
   @Autowired
   private MockMvc mockMvc;
   @MockBean
@@ -37,8 +40,8 @@ class EmailControllerTest {
 
     mockMvc.perform(post(URL).contentType(APPLICATION_JSON)
             .content(mapper.writeValueAsString(EmailSendRequest.builder()
-                .content("aaa")
-                .subject("aaa")
+                .content(CONTENT)
+                .subject(SUBJECT)
                 .build())))
         .andExpect(status().is4xxClientError());
     verifyNoInteractions(emailHandler);
@@ -49,9 +52,9 @@ class EmailControllerTest {
   void testValidation_WrongFormatAddress() {
     mockMvc.perform(post(URL).contentType(APPLICATION_JSON)
             .content(mapper.writeValueAsString(EmailSendRequest.builder()
-                .address("aaaa")
-                .content("aaa")
-                .subject("aaa")
+                .address("testmail")
+                .content(CONTENT)
+                .subject(SUBJECT)
                 .build())))
         .andExpect(status().is4xxClientError());
     verifyNoInteractions(emailHandler);
@@ -63,8 +66,8 @@ class EmailControllerTest {
 
     mockMvc.perform(post(URL).contentType(APPLICATION_JSON)
             .content(mapper.writeValueAsString(EmailSendRequest.builder()
-                .address("aaa@gmail.com")
-                .content("aaa")
+                .address(EMAIL)
+                .content(CONTENT)
                 .build())))
         .andExpect(status().is4xxClientError());
     verifyNoInteractions(emailHandler);
@@ -76,8 +79,8 @@ class EmailControllerTest {
 
     mockMvc.perform(post(URL).contentType(APPLICATION_JSON)
             .content(mapper.writeValueAsString(EmailSendRequest.builder()
-                .address("aaa@gmail.com")
-                .subject("aaa")
+                .address(EMAIL)
+                .subject(SUBJECT)
                 .build())))
         .andExpect(status().is4xxClientError());
     verifyNoInteractions(emailHandler);
@@ -87,30 +90,30 @@ class EmailControllerTest {
   @SneakyThrows
   void test_AllCorrect() {
 
-    doNothing().when(emailHandler).send(anyString(), anyString(), anyString());
+    doNothing().when(emailHandler).send(any(EmailSendRequest.class));
     mockMvc.perform(post(URL).contentType(APPLICATION_JSON)
             .content(mapper.writeValueAsString(EmailSendRequest.builder()
-                .address("aaa@gmail.com")
-                .content("aaa")
-                .subject("aaa")
+                .address(EMAIL)
+                .content(CONTENT)
+                .subject(SUBJECT)
                 .build())))
         .andExpect(status().isOk());
-    verify(emailHandler, times(1)).send(anyString(), anyString(), anyString());
+    verify(emailHandler, times(1)).send(any(EmailSendRequest.class));
   }
 
   @Test
   @SneakyThrows
   void test_ServerError5xx() {
 
-    doThrow(new RuntimeException("bye.")).when(emailHandler).send(anyString(), anyString(), anyString());
+    doThrow(new RuntimeException("bye.")).when(emailHandler).send(any(EmailSendRequest.class));
     mockMvc.perform(post(URL).contentType(APPLICATION_JSON)
             .content(mapper.writeValueAsString(EmailSendRequest.builder()
-                .address("aaa@gmail.com")
-                .content("aaa")
-                .subject("aaa")
+                .address(EMAIL)
+                .content(CONTENT)
+                .subject(SUBJECT)
                 .build())))
         .andExpect(status().is5xxServerError());
-    verify(emailHandler, times(1)).send(anyString(), anyString(), anyString());
+    verify(emailHandler, times(1)).send(any(EmailSendRequest.class));
   }
 
 }

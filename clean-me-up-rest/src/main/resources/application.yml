@@ -19,10 +19,12 @@ logging:
     org.springframework: INFO
     com.effcode.clean.me.rest: DEBUG
 
-# There are different ways to store such properties from simple encryption tools
-#  like http://www.jasypt.org/ to special storage like Vault.
+
 com:
   effcode:
     smtp:
-      login: ${SMTP_LOGIN:admin}
+      login: ${SMTP_LOGIN:admin}  # There are different ways to store such properties from simple encryption tools like http://www.jasypt.org/ to special storage like Vault.
       pass: ${SMTP_PASS:admin}
+    clean:
+      me:
+        log-request-response: ${LOG_REQUEST_RESPONSE:true}

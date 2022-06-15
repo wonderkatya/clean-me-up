@@ -1,9 +1,11 @@
-package com.effcode.clean.me.rest.controller;
+package com.effcode.clean.me.rest;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-import com.effcode.clean.me.rest.model.EmailSendRequest;
-import com.effcode.clean.me.rest.service.EmailHandler;
+import com.effcode.clean.me.model.EmailSendRequest;
+import com.effcode.clean.me.service.EmailHandler;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -23,10 +25,16 @@ public class EmailController {
 
   private final EmailHandler emailHandler;
 
-  //todo @PreAuthorize(hasRole(..))
+  //todo @PreAuthorize(hasAuthority(..))
+  @Operation(summary = "Sends email from given request.",
+      responses = {
+          @ApiResponse(responseCode = "200", description = "Successfully sent."),
+          @ApiResponse(responseCode = "400", description = "Input validation error."),
+          @ApiResponse(responseCode = "500", description = "Internal server error.")
+      })
   @PostMapping(path = "/send-email")
   public ResponseEntity<Void> send(@RequestBody @Valid EmailSendRequest request) {
-    emailHandler.send(request.getAddress(), request.getSubject(), request.getContent());
+    emailHandler.send(request);
     return ResponseEntity.ok().build();
   }
 

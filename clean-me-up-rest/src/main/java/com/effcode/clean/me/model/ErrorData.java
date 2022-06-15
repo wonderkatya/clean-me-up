@@ -1,4 +1,4 @@
-package com.effcode.clean.me.rest.model;
+package com.effcode.clean.me.model;
 
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
